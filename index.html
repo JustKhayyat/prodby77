@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official landing page for producer 77, founder of SVNBIRDS. Discover beats, credits, and contact information.">
+  <meta name="description" content="Immerse in the premium sonic universe of producer 77, founder of SVNBIRDS. Explore beats, sound packs, and exclusive licensing.">
   <meta property="og:title" content="77 | Producer & Founder of SVNBIRDS">
-  <meta property="og:description" content="Dive into the sonic world of producer 77. Stream beats, explore credits, and connect.">
+  <meta property="og:description" content="Discover elevated beats, placements, and sound design from producer 77.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://example.com/">
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=77">
@@ -16,154 +16,301 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top-nav fade-in">
-    <div class="brand">77</div>
+  <div class="ambient-gradient"></div>
+  <header class="top-nav" id="top">
+    <button class="brand" id="brand" aria-label="Open sampler">77</button>
     <nav>
       <a href="#about">About</a>
       <a href="#beats">Beats</a>
+      <a href="#soundpacks">Sound Packs</a>
       <a href="#credits">Credits</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-outline tag-trigger" id="tag-trigger">Producer Tag</button>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="hero">
+      <div class="hero-background" aria-hidden="true"></div>
       <div class="hero-inner">
-        <p class="hero-kicker fade-in">Founder of SVNBIRDS</p>
-        <h1 class="hero-title fade-in">77</h1>
-        <p class="hero-tagline fade-in">Crafting future-classic soundscapes for artists who move culture.</p>
-        <div class="hero-ctas fade-in">
-          <a class="btn btn-primary" href="#beats">Preview Beats</a>
-          <a class="btn btn-outline" href="#contact">Book a Session</a>
+        <div class="hero-copy">
+          <p class="hero-kicker" data-animate>Founder of SVNBIRDS</p>
+          <h1 class="hero-title" data-animate>77</h1>
+          <p class="hero-tagline" data-animate>Premium, future-facing sound design crafted for artists who move culture.</p>
+          <div class="hero-ctas" data-animate>
+            <a class="btn btn-primary" href="#beats">Explore Beats</a>
+            <button class="btn btn-outline" type="button" id="hero-sound">Signature Loop</button>
+          </div>
+          <div class="hero-social" data-animate>
+            <a href="https://placeholder.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+              <span>IG</span>
+            </a>
+            <a href="https://placeholder.com" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon">
+              <span>TW</span>
+            </a>
+            <a href="https://placeholder.com" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+              <span>YT</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-stats" data-animate>
+          <div class="stat">
+            <span class="stat-value" data-counter="142">0</span>
+            <span class="stat-label">Beats Released</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-counter="52">0</span>
+            <span class="stat-label">Million Streams</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-counter="36">0</span>
+            <span class="stat-label">Placements</span>
+          </div>
         </div>
       </div>
-      <div class="hero-scroll-indicator">Scroll</div>
     </section>
 
     <section class="section about" id="about">
-      <div class="section-header fade-in">
+      <div class="about-panel about-panel--copy" data-animate>
         <span class="section-label">About</span>
-        <h2>Minimal energy. Maximum frequency.</h2>
+        <h2>Minimal design, maximal resonance.</h2>
+        <p>77 sculpts immersive atmospheres that pulse through underground venues, global playlists, and cinematic universes. The craft is meticulous: modular synth resampling, analog saturation, and rhythmic tension shaped for artists with vision.</p>
+        <p>SVNBIRDS is the laboratory. Collaboration is ritual. Every project is engineered with bespoke textures, dynamic low-end, and narrative pacing built to translate from headphones to headline festivals.</p>
+        <a class="btn btn-primary" href="#contact">Start a Session</a>
       </div>
-      <div class="about-content fade-in">
-        <p>
-          77 is a visionary producer and founder of SVNBIRDS, designing immersive soundscapes that bridge underground grit with
-          cinematic polish. With a decade of studio mastery, 77 shapes artists’ stories into resonant experiences felt from club
-          floors to curated playlists worldwide.
-        </p>
-        <p>
-          Each collaboration is a dialogue in rhythm—tailored arrangements, surgically engineered drums, and tonal palettes that
-          evolve with every beat. Precision, emotion, and innovation define the catalog.
-        </p>
+      <div class="about-panel about-panel--media" data-animate>
+        <div class="about-badge">SVNBIRDS 004</div>
+        <div class="about-grid">
+          <div class="about-tile">Hybrid Sound Design</div>
+          <div class="about-tile">Analog Warmth</div>
+          <div class="about-tile">Cinematic Texture</div>
+          <div class="about-tile">Global Pulse</div>
+        </div>
       </div>
     </section>
 
     <section class="section beats" id="beats">
-      <div class="section-header fade-in">
+      <div class="section-header" data-animate>
         <span class="section-label">Beat Showcase</span>
-        <h2>Frequencies on Repeat</h2>
-        <p>Preview selections from the vault. Custom instrumentals available on request.</p>
+        <h2>Waveforms tuned for tomorrow.</h2>
+        <p>Filter the catalog and preview the energy. Custom licensing available upon request.</p>
+      </div>
+      <div class="beat-filters" data-animate>
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="trap">Trap</button>
+        <button type="button" class="filter-btn" data-filter="drill">Drill</button>
+        <button type="button" class="filter-btn" data-filter="dark">Dark</button>
+        <button type="button" class="filter-btn" data-filter="ambient">Ambient</button>
       </div>
       <div class="beat-grid">
-        <article class="beat-card fade-in">
-          <div class="beat-header">
-            <h3>Neon Pulse</h3>
-            <span>140 BPM · Trap</span>
+        <article class="beat-card" data-category="trap">
+          <div class="beat-info">
+            <div>
+              <h3>Ghostline</h3>
+              <span>144 BPM · Trap</span>
+            </div>
+            <button class="btn btn-minimal license-btn" type="button" data-beat="Ghostline">License</button>
           </div>
-          <audio controls preload="none">
-            <source src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="waveform" data-audio="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2221b7f8cc.mp3?filename=deep-abstract-beat-13892.mp3"></div>
+          <div class="beat-controls">
+            <button class="play-btn" type="button">Play</button>
+            <span class="beat-duration">02:12</span>
+          </div>
         </article>
-        <article class="beat-card fade-in">
-          <div class="beat-header">
-            <h3>Midnight Blur</h3>
-            <span>120 BPM · R&B</span>
+        <article class="beat-card" data-category="drill">
+          <div class="beat-info">
+            <div>
+              <h3>Vanguard</h3>
+              <span>150 BPM · Drill</span>
+            </div>
+            <button class="btn btn-minimal license-btn" type="button" data-beat="Vanguard">License</button>
           </div>
-          <audio controls preload="none">
-            <source src="https://www2.cs.uic.edu/~i101/SoundFiles/ImperialMarch60.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="waveform" data-audio="https://cdn.pixabay.com/download/audio/2022/03/28/audio_c1bdf4cf0d.mp3?filename=future-bass-14170.mp3"></div>
+          <div class="beat-controls">
+            <button class="play-btn" type="button">Play</button>
+            <span class="beat-duration">01:58</span>
+          </div>
         </article>
-        <article class="beat-card fade-in">
-          <div class="beat-header">
-            <h3>Glass River</h3>
-            <span>98 BPM · Alt</span>
+        <article class="beat-card" data-category="dark">
+          <div class="beat-info">
+            <div>
+              <h3>Night Veil</h3>
+              <span>132 BPM · Dark</span>
+            </div>
+            <button class="btn btn-minimal license-btn" type="button" data-beat="Night Veil">License</button>
           </div>
-          <audio controls preload="none">
-            <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand3.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="waveform" data-audio="https://cdn.pixabay.com/download/audio/2021/09/14/audio_f4dc9cc4c5.mp3?filename=horror-trailer-10932.mp3"></div>
+          <div class="beat-controls">
+            <button class="play-btn" type="button">Play</button>
+            <span class="beat-duration">02:24</span>
+          </div>
         </article>
-        <article class="beat-card fade-in">
-          <div class="beat-header">
-            <h3>Arc Reactor</h3>
-            <span>152 BPM · EDM</span>
+        <article class="beat-card" data-category="ambient">
+          <div class="beat-info">
+            <div>
+              <h3>Ether Bloom</h3>
+              <span>102 BPM · Ambient</span>
+            </div>
+            <button class="btn btn-minimal license-btn" type="button" data-beat="Ether Bloom">License</button>
           </div>
-          <audio controls preload="none">
-            <source src="https://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther30.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="waveform" data-audio="https://cdn.pixabay.com/download/audio/2021/10/21/audio_a4c65f0def.mp3?filename=deep-ambient-11389.mp3"></div>
+          <div class="beat-controls">
+            <button class="play-btn" type="button">Play</button>
+            <span class="beat-duration">03:04</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soundpacks" id="soundpacks">
+      <div class="section-header" data-animate>
+        <span class="section-label">Sound Packs</span>
+        <h2>Tools built inside the SVNBIRDS lab.</h2>
+        <p>Curated drum kits, analog synth textures, and vocal atmospheres ready for instant elevation.</p>
+      </div>
+      <div class="pack-grid">
+        <article class="pack-card" data-animate>
+          <h3>Obsidian Drum Kit</h3>
+          <p>Premium 808s, rimshots, and percussion layers sculpted for impact.</p>
+          <a class="btn btn-outline" href="https://placeholder.com">Preview Kit</a>
+        </article>
+        <article class="pack-card" data-animate>
+          <h3>Phantom Loop Suite</h3>
+          <p>24-bit melodic textures and reversed pads tuned for late-night sessions.</p>
+          <a class="btn btn-outline" href="https://placeholder.com">Preview Suite</a>
+        </article>
+        <article class="pack-card" data-animate>
+          <h3>Neon Voice Presets</h3>
+          <p>Vocal chains and granular fx presets engineered for atmospheric hooks.</p>
+          <a class="btn btn-outline" href="https://placeholder.com">Preview Presets</a>
         </article>
       </div>
     </section>
 
     <section class="section credits" id="credits">
-      <div class="section-header fade-in">
+      <div class="section-header" data-animate>
         <span class="section-label">Credits</span>
-        <h2>Trusted by visionaries</h2>
-        <p>Selected placements &amp; collaborations.</p>
+        <h2>Trusted by visionaries worldwide.</h2>
+        <p>Selected placements, campaigns, and collaborations.</p>
       </div>
       <div class="credits-grid">
-        <div class="credit-card fade-in">
-          <div class="credit-logo" aria-hidden="true"></div>
+        <div class="credit-card" data-animate>
+          <div class="credit-logo"></div>
           <p>Artist Placeholder</p>
         </div>
-        <div class="credit-card fade-in">
-          <div class="credit-logo" aria-hidden="true"></div>
+        <div class="credit-card" data-animate>
+          <div class="credit-logo"></div>
           <p>Label Placeholder</p>
         </div>
-        <div class="credit-card fade-in">
-          <div class="credit-logo" aria-hidden="true"></div>
+        <div class="credit-card" data-animate>
+          <div class="credit-logo"></div>
           <p>Brand Placeholder</p>
         </div>
-        <div class="credit-card fade-in">
-          <div class="credit-logo" aria-hidden="true"></div>
+        <div class="credit-card" data-animate>
+          <div class="credit-logo"></div>
           <p>Collective Placeholder</p>
         </div>
       </div>
     </section>
 
     <section class="section contact" id="contact">
-      <div class="section-header fade-in">
-        <span class="section-label">Contact</span>
-        <h2>Let’s build the next record</h2>
-        <p>Tell me about the project, timelines, and vision.</p>
+      <div class="contact-content" data-animate>
+        <div class="contact-copy">
+          <span class="section-label">Contact</span>
+          <h2>Let’s architect the next release.</h2>
+          <p>Send the vision, timeline, and references. 77 responds within 24 hours.</p>
+          <form class="contact-form" action="mailto:booking@svnbirds.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              Project Details
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </form>
+        </div>
+        <div class="newsletter" data-animate>
+          <h3>Stay updated</h3>
+          <p>Join the frequency list for new drops, sound packs, and exclusive placements.</p>
+          <form class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">Email</label>
+            <input type="email" id="newsletter-email" placeholder="you@domain.com" required>
+            <button type="submit" class="btn btn-outline">Join Newsletter</button>
+          </form>
+        </div>
       </div>
-      <form class="contact-form fade-in" action="mailto:booking@svnbirds.com" method="post" enctype="text/plain">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Project Details
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary">Send Inquiry</button>
-      </form>
     </section>
   </main>
 
   <footer class="footer">
     <p>&copy; <span id="year"></span> 77 · SVNBIRDS. All rights reserved.</p>
-    <a href="#hero" class="back-to-top">Back to top</a>
+    <a href="#top" class="back-to-top">Back to top</a>
   </footer>
 
+  <div class="modal" id="licensing-modal" aria-hidden="true" role="dialog" aria-modal="false">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" type="button" id="modal-close" aria-label="Close licensing options">&times;</button>
+      <h3 id="modal-title">License Beat</h3>
+      <p id="modal-beat">Select a licensing tier for this beat.</p>
+      <div class="modal-options">
+        <div class="modal-option">
+          <h4>Basic</h4>
+          <p>MP3 + WAV, 50k streams, 1 music video.</p>
+          <span class="modal-price">$49</span>
+        </div>
+        <div class="modal-option">
+          <h4>Premium</h4>
+          <p>Trackouts + WAV, 500k streams, unlimited videos.</p>
+          <span class="modal-price">$129</span>
+        </div>
+        <div class="modal-option">
+          <h4>Unlimited</h4>
+          <p>All files, unlimited streams, radio ready, sync cleared.</p>
+          <span class="modal-price">$249</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="https://placeholder.com">Secure License</a>
+    </div>
+  </div>
+
+  <div class="sampler" id="sampler" aria-hidden="true">
+    <div class="sampler-overlay" id="sampler-overlay"></div>
+    <div class="sampler-window">
+      <div class="sampler-header">
+        <h3>77 // Micro Sampler</h3>
+        <button class="sampler-close" id="sampler-close" aria-label="Close sampler">&times;</button>
+      </div>
+      <div class="sampler-grid">
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2021/09/30/audio_3bec8d6124.mp3?filename=808-kick-11083.mp3">1</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2022/03/24/audio_0ca990cb0f.mp3?filename=snare-hip-hop-14113.mp3">2</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2021/09/28/audio_f5f7af5120.mp3?filename=hihat-10992.mp3">3</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2022/02/16/audio_15d1c2fff1.mp3?filename=perc-hip-hop-13801.mp3">4</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2021/10/26/audio_7590e3f0a0.mp3?filename=vocal-chop-11438.mp3">5</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2022/03/29/audio_9020ec1c10.mp3?filename=fx-impact-14183.mp3">6</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2021/11/12/audio_59c59e86aa.mp3?filename=pad-chord-11901.mp3">7</button>
+        <button class="sampler-pad" data-sample="https://cdn.pixabay.com/download/audio/2021/10/15/audio_61e24d9021.mp3?filename=vox-hit-11315.mp3">8</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="hero-audio" preload="none" src="https://cdn.pixabay.com/download/audio/2022/03/21/audio_145fad2ed0.mp3?filename=lofi-chill-medium-version-14016.mp3"></audio>
+  <audio id="tag-audio" preload="none" src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_2e8def5a0a.mp3?filename=voice-tag-13805.mp3"></audio>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-+j1YbjFFBXdLfE3gQ/ffNp0EB4kU5ekKyZ7u79+Ww+TfLMD+3VOfqdMnXeEf39MFyU/y72EsU2nRMsVfVW8Q0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-jZ5Y1ioNymykUZpMBMXh5GriJU2yyglN6E466+vWXTmFRrMUR3pvN8MPm+2MvmP0xSg6u40qCMgfHTCqkfNNig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7"></script>
   <script src="main.js"></script>
 </body>
 </html>
